@@ -50,7 +50,7 @@ A modern, responsive student management dashboard for educational institutions. 
    npm install
    ```
 
-3. Create a `.env` file in the root directory with your Firebase configuration (optional for demo mode):
+3. Create a `.env` file in the root directory with your Firebase configuration:
    ```
    VITE_FIREBASE_API_KEY=your_api_key
    VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
@@ -69,8 +69,7 @@ A modern, responsive student management dashboard for educational institutions. 
 
 ### Authentication
 
-- **Demo Mode**: The application includes a demo mode that works without Firebase credentials
-- **Login**: Use email "one@one.com" for demo access
+- **Login**: Use email "one@one.com" for demo access (integrated a one click button)
 - **Signup**: Create a new account with email and password validation
 
 ### Student Management
