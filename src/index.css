@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-secondary-50 text-secondary-900 dark:bg-secondary-900 dark:text-secondary-50 m-0 min-h-screen;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+  
+  /* Reset buttons */
+  button {
+    @apply bg-transparent border-0 p-0 cursor-pointer;
+  }
+
+  /* Fix input text color in dark mode */
+  input, select, textarea {
+    @apply dark:text-secondary-900 dark:placeholder-secondary-500;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 px-4 py-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-100 text-secondary-900 hover:bg-secondary-200 border border-secondary-200 px-4 py-2 dark:bg-secondary-800 dark:text-secondary-100 dark:border-secondary-700 dark:hover:bg-secondary-700;
+  }
+  
+  .btn-outline {
+    @apply border border-primary-200 bg-transparent text-primary-600 hover:bg-primary-50 px-4 py-2 dark:text-primary-400 dark:border-primary-800 dark:hover:bg-primary-900/30;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg border border-secondary-200 shadow-card overflow-hidden dark:bg-secondary-800 dark:border-secondary-700;
+  }
+  
+  .hover-row {
+    @apply hover:bg-gray-50 dark:hover:bg-secondary-700/50 transition-all duration-200 transform hover:scale-[1.01];
+  }
+  
+  .input-field {
+    @apply flex h-10 w-full rounded-md border border-secondary-300 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-secondary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-secondary-600 dark:bg-secondary-50 dark:text-secondary-900 dark:placeholder-secondary-500;
+  }
+  
+  .select-field {
+    @apply flex h-10 w-full rounded-md border border-secondary-300 bg-white px-3 py-2 text-sm ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-secondary-600 dark:bg-secondary-50 dark:text-secondary-900;
+  }
+  
+  .label {
+    @apply text-sm font-medium text-secondary-700 mb-1.5 block dark:text-secondary-300;
+  }
+} 
